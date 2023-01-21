@@ -12,7 +12,7 @@ if(isset($_POST['titulo'], $_POST['isbn'], $_POST['autor'], $_POST['resumo'], $_
     $novoLivro-> resumo = $_POST['resumo'];
     $novoLivro-> ano_lancamento = $_POST['ano_lancamento'];
 
-    // $novoLivro.cadastrar();
+    $novoLivro->cadastrar();
 
 
 }

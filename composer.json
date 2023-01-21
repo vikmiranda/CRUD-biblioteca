@@ -1,0 +1,9 @@
+{
+    "name": "biblioteca/infinito",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+
+}

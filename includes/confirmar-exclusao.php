@@ -2,7 +2,7 @@
                     <div class="wrapper">
                         <div class="box">
                             <div class="header-box">
-                                <h3 class="font-vinho">Excluir Vaga</h3>
+                                <h3 class="font-vinho">Excluir Livro</h3>
                                 <hr>
                             </div>
                             <div class="body-box">

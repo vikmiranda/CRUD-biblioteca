@@ -4,9 +4,10 @@ require __DIR__ .'/vendor/autoload.php';
 define('TITLE', 'Cadastrar Livro');
 
 use \App\Entity\Livro;
+$novoLivro = new Livro;
 
 if(isset($_POST['titulo'], $_POST['isbn'], $_POST['autor'], $_POST['resumo'], $_POST['ano_lancamento'])){
-    $novoLivro = new Livro;
+    
     $novoLivro -> titulo = $_POST['titulo'];
     $novoLivro -> isbn = $_POST['isbn'];
     $novoLivro-> autor = $_POST['autor'];

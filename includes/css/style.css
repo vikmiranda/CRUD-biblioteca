@@ -1,14 +1,14 @@
 .sidebar{
     text-align: center;
     padding: 20px;
-
+    position: fixed;
 }
 .wrapper {
     margin-top: 3%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: center;   
 }
 
 .box {
@@ -25,7 +25,7 @@
 .bg-side{
     background-color: #391D34;
     color: white;
-    height: 100vh;
+    height: 100%;
 
 }
 .header{
@@ -55,15 +55,14 @@
 
 }
 
+.col-md{
+    color: #391D34;
+}
 
 /* VERIFICAR SE PRECISA DEIXAR ISSO. PROVAVELMENTE NAO */
-/* .link-float{
+.link-float{
     text-decoration: none;
     float: right;
     margin: 20px;
 }
 
-.side-logo{
-    text-align: center;
-    margin-top: 60px;
-} */

@@ -1,6 +1,7 @@
 <?php
 
 require __DIR__ .'/vendor/autoload.php';
+define('TITLE', 'Cadastrar Livro');
 
 use \App\Entity\Livro;
 

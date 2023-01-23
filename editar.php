@@ -34,5 +34,5 @@ if(isset($_POST['titulo'], $_POST['isbn'], $_POST['autor'], $_POST['resumo'], $_
 }
 
 include __DIR__ . '/includes/header.php';
-include __DIR__ . '/includes/formulario.php';
+include __DIR__ . '/includes/form-editar.php';
 include __DIR__ . '/includes/footer.php';

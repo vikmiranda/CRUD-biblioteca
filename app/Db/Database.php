@@ -22,13 +22,25 @@ class Database{
 
     public function setConnection(){
         try{
-            $this->connection = new PDO('mysql:host:' . self::HOST . ';dbname=' . self::NAME, self::USER, self::PASS);
+            $this->connection = new PDO('mysql:host='.self::HOST.';dbname='.self::NAME, self::USER, self::PASS);
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
  
         }
         catch(PDOException $e){
-            die('ERROR: ' . $e->getMessage());
+            die('ERROR FUNCAO setconnection: ' . $e->getMessage());
             //TODO: Mostrar mensagem mais amigavel ao usuario final. deixar a excecao num log
+        }
+
+    }
+
+    public function execute($query, $params = []){
+        try{
+            $statement = $this->connection->prepare($query);
+            $statement->execute($params);
+            return $statement;
+        }
+        catch(PDOException $e){
+            die('ERROR funcao execute: ' . $e->getMessage());
         }
 
     }
@@ -36,9 +48,19 @@ class Database{
     public function insertLivro($values){
         $fields = array_keys($values);
         $query = 'INSERT INTO tbl_livro'. '('.implode(',',$fields).') VALUES (?,?,?,?,?)';
-        $sql = $this->connection->prepare($query);
-        $sql->execute($query, array_values($values));
+        $this->execute($query, array_values($values));
 
+        return $this->connection->lastInsertId();
+    }
+
+    public function select($where = null, $order = null, $limit = null, $fields = '*'){
+        $where = strlen($where) ? 'WHERE '.$where : '';
+        $order = strlen($order) ? 'ORDER BY '.$order : '';
+        $limit = strlen($limit) ? 'LIMIT '.$limit : '';
+
+        $query = 'SELECT '.$fields.' FROM ' . $this->table . ' ' . $where . ' ' . $order . ' ' . $limit;
+
+        return $this->execute($query);
     }
 
 

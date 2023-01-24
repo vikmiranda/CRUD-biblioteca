@@ -1,10 +1,10 @@
 <?php
-
+    #TODO: mensagens de resultado da ação não funcionais. : Carregar mensagens de successo/erro de forma elegante. 
     $mensagem = '';
     if(isset($_GET['status'])){
         switch($_GET['status']){
-            case 'success':
-                $mensagem = '<div class="alert alert-success">Ação Executada com Sucesso</div>';
+        case 'success':
+            $mensagem = 'SUCESSO';
                 break;
 
                case 'error':
@@ -59,7 +59,7 @@
                                                                 </div>
                                                                 </div>';
 
-
+                                                        
 ?>
 
 <?=$resultados?>

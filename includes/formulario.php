@@ -1,38 +1,35 @@
-<div class="col-md">
-                    <div class="wrapper">
-                        <div class="box">
-                            <div class="header-box">
-                                <h3 class="font-vinho">Cadastre seu Livro</h3>
-                                <hr>
-                            </div>
-                            <div class="body-box">
-                                <form action="" method="POST" enctype='multipart/form-data'>            
-    
-                                    <span>Título do Livro:<span>
-                                    <input type="text" class="form-control" name="titulo" placeholder="Digite o título do livro..." >
-                                    <br>
 
-                                    <span>Isbn<span>
-                                    <input type="text" class="form-control" name="isbn" placeholder="Informe o ISBN do livro...">
-                                    <br>
+<div class="h-screen flex flex-col items-center  justify-center border  rounded">
 
-                                    <span>Autor<span>
-                                    <input type="text" class="form-control" name="autor" placeholder="Informe o nome do Autor..." >
-                                    <br>
 
-                                    <span>Resumo:<span>
-                                    <textarea class="form-control" name="resumo" placeholder="Faça um breve resumo sobre o livro..."></textarea>
-                                    <br>
+<form method="POST" enctype='multipart/form-data'>
+  <div class="mb-6">
+    <label for="titulo" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Título</label>
+    <input type="text" id="titulo" name="titulo" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Título do Livro" required>
+  </div>
 
-                                    <span>Ano de Lançamento<span>
-                                    <input type="text" class="form-control" name="ano_lancamento" placeholder="Informe o ano de lançamento...">
-                                    <br> <br>
-                      
+  <div class="mb-6">
+    <label for="isbn" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Isbn</label>
+    <input type="text" id="isbn" name="isbn" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Informe o ISBN do livro" required>
+  </div>
 
-                                    <input type="submit" value="ENVIAR" class="btn-custom-primary">
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-     
+  <div class="mb-6">
+    <label for="autor" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Autor</label>
+    <input type="text" id="autor" name="autor" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Autor do Livro" required>
+  </div>
+
+<div class="mb-6">
+    <label for="resumo" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Resumo</label>
+    <textarea id="resumo" name="resumo" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Descrição do Livro"></textarea>
+</div>
+
+    <div class="mb-6">
+    <label for="ano_lancamento" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Ano de Lançamento</label>
+    <input type="text" id="ano_lancamento" name="ano_lancamento" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Ano de Lançamento" required>
+  </div>
+ 
+
+  <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Cadastrar</button>
+</form>
+
+</div>

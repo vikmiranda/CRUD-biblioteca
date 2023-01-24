@@ -27,6 +27,6 @@ if(isset($_POST['excluir'])){
     exit;
 }
 
-include __DIR__ . '/includes/header.php';
+include __DIR__ . '/includes/navbar.php';
 include __DIR__ . '/includes/confirmar-exclusao.php';
 include __DIR__ . '/includes/footer.php';

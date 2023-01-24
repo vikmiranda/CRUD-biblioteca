@@ -33,6 +33,6 @@ if(isset($_POST['titulo'], $_POST['isbn'], $_POST['autor'], $_POST['resumo'], $_
     exit;   
 }
 
-include __DIR__ . '/includes/header.php';
+include __DIR__ . '/includes/navbar.php';
 include __DIR__ . '/includes/form-editar.php';
 include __DIR__ . '/includes/footer.php';

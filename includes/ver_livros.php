@@ -17,41 +17,51 @@
 
     $resultados = '';
     foreach($livros as $livro){
-        $resultados .= '    <div class="wrapper">
-                                <div class="box">
-                                    <div class="header-box">
-                                        <h3 class="font-vinho">'.$livro->titulo.'</h3> <hr>
-                                    </div>
-                                <H4>Isbn:'.$livro->isbn.' </H4> <hr>
-                                <H4>Autor:'.$livro->autor.' </H4><hr>
-                                <H4>Ano de lançamento:'.$livro->ano_lancamento.' </H4><hr>
-                                <H4>Resumo: '.$livro->resumo.' </H4><hr>
 
-                                <a href="editar.php?id='.$livro->ID_livro.'"><button type="button" class="btn btn-primary">Editar</button>
-                                </a>
-                                <a href="excluir.php?id='.$livro->ID_livro.'"><button type="button" class="btn btn-danger">Excluir</button>
-                                </a>
-                                </div>  
-                            </div>';
-                  
+    $resultados .= '<div class="h-screen flex flex-col  items-center  justify-center border  rounded">
+                                                
+                                    <div class=" max-w-4xl bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                                    <div class="flex flex-col space-y-2">
+                                        <a >
+                                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">'.$livro->titulo.'</h5>
+                                        </a>
+
+                                        <H4 >Isbn: '.$livro->isbn.' </H4> 
+                                        <H4 >Autor: '.$livro->autor.' </H4><hr>
+                                        <H4 >Ano de lançamento: '.$livro->ano_lancamento.' </H4><hr>
+                                        <H4 >Resumo: '.$livro->resumo.' </H4><hr>
+
+                                        <div> 
+                                        <a href="editar.php?id='.$livro->ID_livro.'" >
+                                        <button type="button" class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">Editar</button>
+                                        </a>
+
+                                        <a href="excluir.php?id='.$livro->ID_livro.'" >
+                                        <button type="button" class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">Excluir</button>
+                                        </a>
+
+
+
+
+                    </div>';
+ 
     }
 
-    $resultados = strlen($resultados) ? $resultados : '    <div class="wrapper">
-                                                                <div class="box">
-                                                                    <div class="header-box">
-                                                                        <h3 class="font-vinho">Nenhum Livro encontrado. Começe já a encher sua estante.</h3> <hr>
-                                                                    </div>
-                                                                            
-                                                                </div>  
-                                                            </div>';
- 
+
+
+    $resultados = strlen($resultados) ? $resultados : '    <div class="h-screen flex flex-col  items-center  justify-center border  rounded">
+                                                
+                                                        <div class=" max-w-4xl bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                                                            
+                                                            <a >
+                                                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Sua estante está vazia. Cadastre um Livro</h5>
+                                                            </a>
+                                                                </div>
+                                                                </div>';
+
+
 ?>
 
-<div class="col-md">
-        <div class="row">
-        <?=$mensagem?>
-        </div>
-        <?=$resultados?>
-   
-</div> 
+<?=$resultados?>
+
 

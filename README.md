@@ -1,7 +1,7 @@
 # Biblioteca do Infinito
-Projeto: **Projeto para registro de livros** \
+Este projeto é um CRUD onde o usuario pode registrar seus livros, visualizar, editar, atualizar ou exclui-los.
 
-
+O sistema está disponível para uso em: https://biblioteca-do-infinito.000webhostapp.com/
 
 ### Stack de Desenvolvimento
 #### Backend:

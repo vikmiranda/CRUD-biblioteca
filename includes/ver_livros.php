@@ -20,16 +20,16 @@
 
     $resultados .= '<div class="h-screen flex flex-col  items-center  justify-center border  rounded">
                                                 
-                                    <div class=" max-w-4xl bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                                    <div class=" w-96 bg-blue border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                                     <div class="flex flex-col space-y-2">
                                         <a >
                                             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">'.$livro->titulo.'</h5>
                                         </a>
 
-                                        <H4 >Isbn: '.$livro->isbn.' </H4> 
-                                        <H4 >Autor: '.$livro->autor.' </H4><hr>
-                                        <H4 >Ano de lançamento: '.$livro->ano_lancamento.' </H4><hr>
-                                        <H4 >Resumo: '.$livro->resumo.' </H4><hr>
+                                        <H4 ><strong> Isbn:</strong> '.$livro->isbn.' </H4> 
+                                        <H4 ><strong> Autor:</strong> '.$livro->autor.' </H4><hr>
+                                        <H4 ><strong> Ano de lançamento:</strong> '.$livro->ano_lancamento.' </H4><hr>
+                                        <H4 ><strong> Resumo:</strong> '.$livro->resumo.' </H4><hr>
 
                                         <div> 
                                         <a href="editar.php?id='.$livro->ID_livro.'" >
